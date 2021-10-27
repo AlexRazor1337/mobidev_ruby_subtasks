@@ -12,6 +12,8 @@ class ShopInventory
             end
         end
 
+        _items.sort()
+
         return _items
     end
 
