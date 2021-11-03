@@ -1,0 +1,7 @@
+task :cleanup, [:path] do |_, args|
+    if !args[:path]
+        args[:path] = 'build'
+    end
+    Dir.glob(File.join(File.dirname(__FILE__),  args[:path] + File::SEPARATOR + '*.md')).each { |file| File.delete(file)}
+    Dir.glob(File.join(File.dirname(__FILE__),  args[:path] + File::SEPARATOR + '*.html')).each { |file| File.delete(file)}
+end
