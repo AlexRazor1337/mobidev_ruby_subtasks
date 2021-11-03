@@ -17,3 +17,9 @@ ruby app.rb
 ```
 
 The prompt will ask you about resulting file folder and type. If folder doesn't exist it will create it.
+
+To clean up files rakefile can be used:
+```
+rake "cleanup[./]"
+```
+By default it will clean `build` folder and remove all **.md** and all **.html** files.
